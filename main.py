@@ -31,8 +31,8 @@ class createDeivceUI(QWidget):
         h2box = QHBoxLayout()
         h2box.addWidget(QLabel('VLAN:'))
 
-        vlan_id = QLineEdit()
-        h2box.addWidget(vlan_id)
+        self.vlan_id = QSpinBox()
+        h2box.addWidget(self.vlan_id)
 
         executeButton = QPushButton('설정시작')
         h2box.addWidget(executeButton)
@@ -94,6 +94,7 @@ class createDeivceUI(QWidget):
         ### END ###
 
     # 버튼 메소드
+    device = []
     def createButtonClicked(self):
         device_count = self.number_of_Device.value()
         device = []
